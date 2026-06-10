@@ -14,6 +14,7 @@
      Example: "Student reviews of CS professors at [university] — useful because official
      course descriptions don't reflect teaching style, exam difficulty, or workload." -->
 
+Student experiences with off campus housing near UW
 ---
 
 ## Document Sources
@@ -24,16 +25,16 @@
 
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | UW Website |wiki |https://www.ielp.uw.edu/life-at-the-uw/housing/off-campus-housing|
+| 2 | UW Website |wiki |https://hfs.uw.edu/live/apply-for-housing-new-residents/|
+| 3 | UW Website |wiki|https://hfs.uw.edu/live/apply-for-housing-current-residents/ |
+| 4 | U district Universe |blog |https://uw.offcampus-universe.com/post/student-housing-in-seattle-the-complete-uw-off-campus-guide?utm_source=chatgpt.com |
+| 5 | U district Universe|blog|https://uw.offcampus-universe.com/post/student-housing-university-of-washington-seattle-guide?utm_source=chatgpt.com |
+| 6 | U district Universe|blog|https://uw.offcampus-universe.com/post/uw-student-housing-a-seattle-off-campus-living-guide?utm_source=chatgpt.com |
+| 7 | Reddit| chat post |https://www.reddit.com/r/udub/comments/1l2whc9/uw_student_off_campus_apartments/?utm_source=chatgpt.com|
+| 8 | Reddit|chat post |https://www.reddit.com/r/udub/comments/1nu78ga/uw_housing_megathread_fall_2025/ |
+| 9 | Reddit| chat post |https://www.reddit.com/r/udub/comments/1e767r3/where_do_most_uw_students_live/ |
+| 10 | Reddit| chat post |https://www.reddit.com/r/udub/comments/1r4yekm/getting_housing_with_financial_aid/ |
 
 ---
 
@@ -46,11 +47,11 @@
      - Any preprocessing you did before chunking (e.g., stripping HTML, removing headers)
      - What your final chunk count was across all documents -->
 
-**Chunk size:**
+**Chunk size: 200 words**
 
-**Overlap:**
+**Overlap: 30 words**
 
-**Why these choices fit your documents:**
+**Why these choices fit your documents: Most of webpage sections are shorter than 200 words and while the Reddit comments vary in length, most comments and topic are still within the 150  mark with key facts concentrated in the paragraph. A chunk size of 200 words will preserve complete comments and webpage sections while minimizing topic mixing. A 30 word overlap should maintain context across chunk boundaries for the longer Reddit discussions in the mega thread source**
 
 **Final chunk count:**
 
@@ -64,9 +65,9 @@
      Consider: context length limits, multilingual support, accuracy on domain-specific text,
      latency, and local vs. API-hosted. -->
 
-**Model used:**
+**Model used:all-MiniLM-L6-v2**
 
-**Production tradeoff reflection:**
+**Production tradeoff reflection:I would compare some of the larger semantic models and evaluate how much they improve retrieval quality versus how much slower or more expensive they are. One model might have a higher context limit that would reduce the need for extremely precise chunking but it might be more expensive because it is API based that has more usage costs and slight latency due to external dependences**
 
 ---
 
